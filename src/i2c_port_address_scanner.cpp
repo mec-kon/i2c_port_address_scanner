@@ -65,8 +65,9 @@ void scanPorts(uint8_t I2C_SDA, uint8_t I2C_SCL){
 void setup() {
   Serial.begin(115200);
   
-  pinMode(12, OUTPUT);
-  digitalWrite(12, HIGH);
+  // enable LM75 and BME280/BME680 if you use mec-kon's weather station (https://github.com/mec-kon/weather_station) 
+  //pinMode(12, OUTPUT);
+  //digitalWrite(12, HIGH);
   
   while (!Serial);             // Leonardo: wait for serial monitor
   Serial.println("\n\nI2C Scanner to scan for devices on each port pair D0 to D7");
